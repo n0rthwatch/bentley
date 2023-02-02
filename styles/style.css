@@ -108,12 +108,14 @@ body.scroll-lock {
   position: relative;
   display: none;
   z-index: 1000;
+  transition: 0.3s;
   /* border: 1px solid black; */
 }
 
 .navbar-toggler span,
 .navbar-toggler span::after,
 .navbar-toggler span::before {
+  transition: .3s;
   content: '';
   display: block;
   position: absolute;
@@ -131,6 +133,24 @@ body.scroll-lock {
 .navbar-toggler span::before {
   top: 13px;
   left: 0;
+}
+
+.navbar-toggler.closed {
+  transition: 0.3s;
+}
+
+.navbar-toggler.closed span::after {
+  display: none;
+}
+
+.navbar-toggler.closed span::before {
+  transform: translateY(-12px) rotate(90deg);
+  transition: .3s;
+}
+
+.navbar-toggler.closed span {
+  transform: rotate(45deg);
+  transition: .3s;
 }
 
 /* ===== BANNER ===== */
@@ -213,11 +233,51 @@ body.scroll-lock {
   margin-bottom: 50px;
 }
 
+.services .container {
+  position: relative;
+}
+
+.services .container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  background: url(../img/bcg-icon-1.svg);
+  top: 185px;
+  left: -300px;
+  width: 237px;
+  height: 196px;
+}
+
+.services .container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  background: url(../img/bcg-icon-2.svg);
+  top: 240px;
+  right: -300px;
+  width: 202px;
+  height: 453px;
+}
+
 .service-cards {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
+}
+
+.service-cards::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  background: url(../img/bcg-icon-3.svg);
+  bottom: 100px;
+  left: -270px;
+  width: 167px;
+  height: 148px;
 }
 
 /* .service-card:not(:last-child) {
