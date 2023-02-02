@@ -1,3 +1,9 @@
+@media (min-width: 1920px) {
+  .banner .swiper-slide {
+    background-size: contain;
+  }
+}
+
 @media (max-width: 1220px) {
   .container {
     padding: 0 20px;
@@ -48,7 +54,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 70%;
     background: #c3c3d0;
     z-index: 100;
     height: 100vh;
@@ -108,6 +114,12 @@
   }
 }
 
+@media (max-width: 430px) {
+  .service-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 @media (max-width: 380px) {
   .banner-swiper {
     height: 450px;
@@ -125,11 +137,5 @@
 
   .block-title {
     font-size: 26px;
-  }
-}
-
-@media (max-width: 430px) {
-  .service-cards {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
